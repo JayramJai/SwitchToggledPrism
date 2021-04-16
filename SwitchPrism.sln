@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwitchPrism", "SwitchPrism\SwitchPrism\SwitchPrism.csproj", "{52413CBA-B06F-4B61-8BEA-B44738B8407E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwitchPrism.Android", "SwitchPrism\SwitchPrism.Android\SwitchPrism.Android.csproj", "{08A93B01-EA1A-4F6D-BB00-275D2920FFCB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52413CBA-B06F-4B61-8BEA-B44738B8407E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52413CBA-B06F-4B61-8BEA-B44738B8407E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52413CBA-B06F-4B61-8BEA-B44738B8407E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52413CBA-B06F-4B61-8BEA-B44738B8407E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08A93B01-EA1A-4F6D-BB00-275D2920FFCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08A93B01-EA1A-4F6D-BB00-275D2920FFCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08A93B01-EA1A-4F6D-BB00-275D2920FFCB}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{08A93B01-EA1A-4F6D-BB00-275D2920FFCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08A93B01-EA1A-4F6D-BB00-275D2920FFCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08A93B01-EA1A-4F6D-BB00-275D2920FFCB}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9EDCF4FE-3B39-4BCF-9120-90FDB053686E}
+	EndGlobalSection
+EndGlobal

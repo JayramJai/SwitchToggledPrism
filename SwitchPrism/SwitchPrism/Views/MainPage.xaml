@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SwitchPrism.Views.MainPage"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             Title="{Binding Title}"
+            x:Name="myPage">
+
+    <ContentPage Title="Page1">
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Label Text="I am a page 1!" />
+        </StackLayout>
+    </ContentPage>
+
+    <ContentPage Title="Page2" Padding="30">
+        <StackLayout>
+            <Label HeightRequest="60" Text="I am a switch inside CollectionView" HorizontalOptions="CenterAndExpand"/>
+            <CollectionView ItemsSource="{Binding SwitchStatus}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <StackLayout HeightRequest="100" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="30">
+                                <Label Text="{Binding Source={x:Reference mySwitch},Path=IsToggled}" VerticalTextAlignment="Center">
+                                    <Label.Triggers>
+                                        <DataTrigger TargetType="Label" Binding="{Binding State}" Value="true">
+                                            <Setter Property="Text" Value="On"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="Label" Binding="{Binding State}" Value="false">
+                                            <Setter Property="Text" Value="OFF"/>
+                                        </DataTrigger>
+                                    </Label.Triggers>
+                                </Label>
+
+                                <Switch x:Name="mySwitch" IsToggled="{Binding State}"> 
+                                    <Switch.Behaviors>
+                                        <prism:EventToCommandBehavior EventName="Toggled" CommandParameter="{Binding .}" Command="{Binding BindingContext.UpdateCommand,Source={x:Reference myPage}}"/>
+                                    </Switch.Behaviors>
+                                </Switch>
+                            </StackLayout>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+        </StackLayout>
+    </ContentPage>
+
+</TabbedPage>
